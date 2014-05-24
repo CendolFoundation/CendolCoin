@@ -10,7 +10,7 @@ Copyright (c) 2014 Cendolcoin Developers
 What is Cendolcoin?
 ----------------
 
-Cendolcoin is a merge mineable N-factor Scrypt coin, released by the Vertcoin developers
+Cendolcoin is a merge mineable N-factor Scrypt coin, released by the Cendol developers
 
  - 2 minute block targets
  - 15 trillion (15x 10^12) total coins, 
@@ -27,7 +27,7 @@ Port:
   22610 : testnet rpc
 
 For more information, as well as an immediately useable, binary version of
-the Monocle client sofware, see http://www.monocle.org.
+the Monocle client sofware, see http://www.cendol.co.in.
 
 
 Max penduduk: Indonesia (2050) 280 juta -> dibulatkan 300jt jiwa
@@ -57,7 +57,7 @@ Definisi cendol standar
   - dijual ditempat umum (asongan), sehingga komponen cost real-estate bisa dihilangkan.
 
 
-Hadiah:
+Ide baru:
   - Cendol selfie
 
 
