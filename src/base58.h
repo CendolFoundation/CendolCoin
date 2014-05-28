@@ -272,7 +272,7 @@ class CBitcoinAddress : public CBase58Data
 public:
     enum
     {
-        PUBKEY_ADDRESS = 50, // Monocle addresses start with M
+        PUBKEY_ADDRESS = 28, // cendol start with C
         SCRIPT_ADDRESS = 7,
         PUBKEY_ADDRESS_TEST = 65, // testnet keys start with T
         SCRIPT_ADDRESS_TEST = 178,

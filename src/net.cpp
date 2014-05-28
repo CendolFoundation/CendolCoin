@@ -1112,7 +1112,7 @@ void ThreadMapPort()
             }
         }
 
-        string strDesc = "Monocle " + FormatFullVersion();
+        string strDesc = "Cendol" + FormatFullVersion();
 
         try {
             loop {
@@ -1192,15 +1192,14 @@ void MapPort(bool)
 // The first name is used as information source for addrman.
 // The second name should resolve to a list of seed addresses.
 static const char *strMainNetDNSSeed[][2] = {
-    {"monseed.meningslos.info", "monseed.meningslos.info"},
-    {"mon-seed.etyd.org", "mon-seed.etyd.org"},
-    {"mon-seed2.etyd.org", "mon-seed2.etyd.org"},
-    {"monexplorer.vertcoin.org", "monexplorer.vertcoin.org"},
+    {"cendol.tanoz.com", "cendol.tanoz.com"},
+    {"cendol2.tanoz.com", "cendol2.tanoz.com"},
+    {"seed.cendol.co.in", "seed.cendol.co.in"},
     {NULL, NULL}
 };
 
 static const char *strTestNetDNSSeed[][2] = {
-    {"testnet-mon.etyd.org", "testnet-mon.etyd.org"},
+    {"test.cendol.co.in", "test.cendol.co.in"},
     {NULL, NULL}
 };
 
@@ -1682,7 +1681,7 @@ bool BindListenPort(const CService &addrBind, string& strError)
     {
         int nErr = WSAGetLastError();
         if (nErr == WSAEADDRINUSE)
-            strError = strprintf(_("Unable to bind to %s on this computer. Monocle is probably already running."), addrBind.ToString().c_str());
+            strError = strprintf(_("Unable to bind to %s on this computer. Cendol is probably already running."), addrBind.ToString().c_str());
         else
             strError = strprintf(_("Unable to bind to %s on this computer (bind returned error %d, %s)"), addrBind.ToString().c_str(), nErr, strerror(nErr));
         printf("%s\n", strError.c_str());

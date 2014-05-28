@@ -6,13 +6,13 @@
     <name>AboutDialog</name>
     <message>
         <location filename="../forms/aboutdialog.ui" line="+14"/>
-        <source>About Monocle</source>
-        <translation>About Monocle</translation>
+        <source>About Cendol</source>
+        <translation>About Cendol</translation>
     </message>
     <message>
         <location line="+39"/>
-        <source>&lt;b&gt;Monocle&lt;/b&gt; version</source>
-        <translation>&lt;b&gt;Monocle&lt;/b&gt; version</translation>
+        <source>&lt;b&gt;Cendol&lt;/b&gt; version</source>
+        <translation>&lt;b&gt;Cendol&lt;/b&gt; version</translation>
     </message>
     <message>
         <location line="+57"/>
@@ -36,8 +36,8 @@ This product includes software developed by the OpenSSL Project for use in the O
     </message>
     <message>
         <location line="+0"/>
-        <source>The Monocle developers</source>
-        <translation>The Monocle developers</translation>
+        <source>The Cendol developers</source>
+        <translation>The Cendol developers</translation>
     </message>
 </context>
 <context>
@@ -69,8 +69,8 @@ This product includes software developed by the OpenSSL Project for use in the O
     </message>
     <message>
         <location filename="../addressbookpage.cpp" line="+63"/>
-        <source>These are your Monocle addresses for receiving payments. You may want to give a different one to each sender so you can keep track of who is paying you.</source>
-        <translation>These are your Monocle addresses for receiving payments. You may want to give a different one to each sender so you can keep track of who is paying you.</translation>
+        <source>These are your Cendol addresses for receiving payments. You may want to give a different one to each sender so you can keep track of who is paying you.</source>
+        <translation>These are your Cendol addresses for receiving payments. You may want to give a different one to each sender so you can keep track of who is paying you.</translation>
     </message>
     <message>
         <location filename="../forms/addressbookpage.ui" line="+14"/>
@@ -84,8 +84,8 @@ This product includes software developed by the OpenSSL Project for use in the O
     </message>
     <message>
         <location line="+11"/>
-        <source>Sign a message to prove you own a Monocle address</source>
-        <translation>Sign a message to prove you own a Monocle address</translation>
+        <source>Sign a message to prove you own a Cendol address</source>
+        <translation>Sign a message to prove you own a Cendol address</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -109,8 +109,8 @@ This product includes software developed by the OpenSSL Project for use in the O
     </message>
     <message>
         <location line="-44"/>
-        <source>Verify a message to ensure it was signed with a specified Monocle address</source>
-        <translation>Verify a message to ensure it was signed with a specified Monocle address</translation>
+        <source>Verify a message to ensure it was signed with a specified Cendol address</source>
+        <translation>Verify a message to ensure it was signed with a specified Cendol address</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -124,8 +124,8 @@ This product includes software developed by the OpenSSL Project for use in the O
     </message>
     <message>
         <location filename="../addressbookpage.cpp" line="-5"/>
-        <source>These are your Monocle addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
-        <translation>These are your Monocle addresses for sending payments. Always check the amount and the receiving address before sending coins.</translation>
+        <source>These are your Cendol addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
+        <translation>These are your Cendol addresses for sending payments. Always check the amount and the receiving address before sending coins.</translation>
     </message>
     <message>
         <location line="+13"/>
@@ -250,8 +250,8 @@ This product includes software developed by the OpenSSL Project for use in the O
     </message>
     <message>
         <location line="+1"/>
-        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR MONOCLES&lt;/b&gt;!</source>
-        <translation>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR MONOCLES&lt;/b&gt;!</translation>
+        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR CENDOLS&lt;/b&gt;!</source>
+        <translation>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR CENDOLS&lt;/b&gt;!</translation>
     </message>
     <message>
         <location line="+0"/>
@@ -277,8 +277,8 @@ This product includes software developed by the OpenSSL Project for use in the O
     </message>
     <message>
         <location line="-56"/>
-        <source>Monocle will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your monocles from being stolen by malware infecting your computer.</source>
-        <translation>Monocle will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your monocles from being stolen by malware infecting your computer.</translation>
+        <source>Cendol will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your cendols from being stolen by malware infecting your computer.</source>
+        <translation>Cendol will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your cendols from being stolen by malware infecting your computer.</translation>
     </message>
     <message>
         <location line="+13"/>
@@ -376,8 +376,8 @@ This product includes software developed by the OpenSSL Project for use in the O
     </message>
     <message>
         <location line="+4"/>
-        <source>Show information about Monocle</source>
-        <translation>Show information about Monocle</translation>
+        <source>Show information about Cendol</source>
+        <translation>Show information about Cendol</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -421,13 +421,13 @@ This product includes software developed by the OpenSSL Project for use in the O
     </message>
     <message>
         <location line="-347"/>
-        <source>Send coins to a Monocle address</source>
-        <translation>Send coins to a Monocle address</translation>
+        <source>Send coins to a Cendol address</source>
+        <translation>Send coins to a Cendol address</translation>
     </message>
     <message>
         <location line="+49"/>
-        <source>Modify configuration options for Monocle</source>
-        <translation>Modify configuration options for Monocle</translation>
+        <source>Modify configuration options for Cendol</source>
+        <translation>Modify configuration options for Cendol</translation>
     </message>
     <message>
         <location line="+9"/>
@@ -457,8 +457,8 @@ This product includes software developed by the OpenSSL Project for use in the O
     <message>
         <location line="-165"/>
         <location line="+530"/>
-        <source>Monocle</source>
-        <translation>Monocle</translation>
+        <source>Cendol</source>
+        <translation>Cendol</translation>
     </message>
     <message>
         <location line="-530"/>
@@ -482,8 +482,8 @@ This product includes software developed by the OpenSSL Project for use in the O
     </message>
     <message>
         <location line="+22"/>
-        <source>&amp;About Monocle</source>
-        <translation>&amp;About Monocle</translation>
+        <source>&amp;About Cendol</source>
+        <translation>&amp;About Cendol</translation>
     </message>
     <message>
         <location line="+9"/>
@@ -502,13 +502,13 @@ This product includes software developed by the OpenSSL Project for use in the O
     </message>
     <message>
         <location line="+7"/>
-        <source>Sign messages with your Monocle addresses to prove you own them</source>
-        <translation>Sign messages with your Monocle addresses to prove you own them</translation>
+        <source>Sign messages with your Cendol addresses to prove you own them</source>
+        <translation>Sign messages with your Cendol addresses to prove you own them</translation>
     </message>
     <message>
         <location line="+2"/>
-        <source>Verify messages to ensure they were signed with specified Monocle addresses</source>
-        <translation>Verify messages to ensure they were signed with specified Monocle addresses</translation>
+        <source>Verify messages to ensure they were signed with specified Cendol addresses</source>
+        <translation>Verify messages to ensure they were signed with specified Cendol addresses</translation>
     </message>
     <message>
         <location line="+28"/>
@@ -538,15 +538,15 @@ This product includes software developed by the OpenSSL Project for use in the O
     </message>
     <message>
         <location line="+47"/>
-        <source>Monocle client</source>
-        <translation>Monocle client</translation>
+        <source>Cendol client</source>
+        <translation>Cendol client</translation>
     </message>
     <message numerus="yes">
         <location line="+141"/>
-        <source>%n active connection(s) to Monocle network</source>
+        <source>%n active connection(s) to Cendol network</source>
         <translation>
-            <numerusform>%n active connection to Monocle network</numerusform>
-            <numerusform>%n active connections to Monocle network</numerusform>
+            <numerusform>%n active connection to Cendol network</numerusform>
+            <numerusform>%n active connections to Cendol network</numerusform>
         </translation>
     </message>
     <message>
@@ -670,8 +670,8 @@ Address: %4
     <message>
         <location line="-23"/>
         <location line="+23"/>
-        <source>URI can not be parsed! This can be caused by an invalid Monocle address or malformed URI parameters.</source>
-        <translation>URI can not be parsed! This can be caused by an invalid Monocle address or malformed URI parameters.</translation>
+        <source>URI can not be parsed! This can be caused by an invalid Cendol address or malformed URI parameters.</source>
+        <translation>URI can not be parsed! This can be caused by an invalid Cendol address or malformed URI parameters.</translation>
     </message>
     <message>
         <location line="+17"/>
@@ -685,8 +685,8 @@ Address: %4
     </message>
     <message>
         <location filename="../bitcoin.cpp" line="+111"/>
-        <source>A fatal error occurred. Monocle can no longer continue safely and will quit.</source>
-        <translation>A fatal error occurred. Monocle can no longer continue safely and will quit.</translation>
+        <source>A fatal error occurred. Cendol can no longer continue safely and will quit.</source>
+        <translation>A fatal error occurred. Cendol can no longer continue safely and will quit.</translation>
     </message>
 </context>
 <context>
@@ -751,8 +751,8 @@ Address: %4
     </message>
     <message>
         <location line="-5"/>
-        <source>The entered address &quot;%1&quot; is not a valid Monocle address.</source>
-        <translation>The entered address &quot;%1&quot; is not a valid Monocle address.</translation>
+        <source>The entered address &quot;%1&quot; is not a valid Cendol address.</source>
+        <translation>The entered address &quot;%1&quot; is not a valid Cendol address.</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -770,8 +770,8 @@ Address: %4
     <message>
         <location filename="../guiutil.cpp" line="+424"/>
         <location line="+12"/>
-        <source>Monocle</source>
-        <translation>Monocle</translation>
+        <source>Cendol</source>
+        <translation>Cendol</translation>
     </message>
     <message>
         <location line="-12"/>
@@ -833,13 +833,13 @@ Address: %4
     </message>
     <message>
         <location line="+31"/>
-        <source>Automatically start Monocle after logging in to the system.</source>
-        <translation>Automatically start Monocle after logging in to the system.</translation>
+        <source>Automatically start Cendol after logging in to the system.</source>
+        <translation>Automatically start Cendol after logging in to the system.</translation>
     </message>
     <message>
         <location line="+3"/>
-        <source>&amp;Start Monocle on system login</source>
-        <translation>&amp;Start Monocle on system login</translation>
+        <source>&amp;Start Cendol on system login</source>
+        <translation>&amp;Start Cendol on system login</translation>
     </message>
     <message>
         <location line="+35"/>
@@ -858,8 +858,8 @@ Address: %4
     </message>
     <message>
         <location line="+6"/>
-        <source>Automatically open the Monocle client port on the router. This only works when your router supports UPnP and it is enabled.</source>
-        <translation>Automatically open the Monocle client port on the router. This only works when your router supports UPnP and it is enabled.</translation>
+        <source>Automatically open the Cendol client port on the router. This only works when your router supports UPnP and it is enabled.</source>
+        <translation>Automatically open the Cendol client port on the router. This only works when your router supports UPnP and it is enabled.</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -868,8 +868,8 @@ Address: %4
     </message>
     <message>
         <location line="+7"/>
-        <source>Connect to the Monocle network through a SOCKS proxy (e.g. when connecting through Tor).</source>
-        <translation>Connect to the Monocle network through a SOCKS proxy (e.g. when connecting through Tor).</translation>
+        <source>Connect to the Cendol network through a SOCKS proxy (e.g. when connecting through Tor).</source>
+        <translation>Connect to the Cendol network through a SOCKS proxy (e.g. when connecting through Tor).</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -943,8 +943,8 @@ Address: %4
     </message>
     <message>
         <location line="+13"/>
-        <source>The user interface language can be set here. This setting will take effect after restarting Monocle.</source>
-        <translation>The user interface language can be set here. This setting will take effect after restarting Monocle.</translation>
+        <source>The user interface language can be set here. This setting will take effect after restarting Cendol.</source>
+        <translation>The user interface language can be set here. This setting will take effect after restarting Cendol.</translation>
     </message>
     <message>
         <location line="+11"/>
@@ -958,8 +958,8 @@ Address: %4
     </message>
     <message>
         <location line="+9"/>
-        <source>Whether to show Monocle addresses in the transaction list or not.</source>
-        <translation>Whether to show Monocle addresses in the transaction list or not.</translation>
+        <source>Whether to show Cendol addresses in the transaction list or not.</source>
+        <translation>Whether to show Cendol addresses in the transaction list or not.</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -1010,8 +1010,8 @@ Address: %4
     <message>
         <location line="-9"/>
         <location line="+9"/>
-        <source>This setting will take effect after restarting Monocle.</source>
-        <translation>This setting will take effect after restarting Monocle.</translation>
+        <source>This setting will take effect after restarting Cendol.</source>
+        <translation>This setting will take effect after restarting Cendol.</translation>
     </message>
     <message>
         <location line="+29"/>
@@ -1029,8 +1029,8 @@ Address: %4
     <message>
         <location line="+50"/>
         <location line="+166"/>
-        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the Monocle network after a connection is established, but this process has not completed yet.</source>
-        <translation>The displayed information may be out of date. Your wallet automatically synchronizes with the Monocle network after a connection is established, but this process has not completed yet.</translation>
+        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the Cendol network after a connection is established, but this process has not completed yet.</source>
+        <translation>The displayed information may be out of date. Your wallet automatically synchronizes with the Cendol network after a connection is established, but this process has not completed yet.</translation>
     </message>
     <message>
         <location line="-124"/>
@@ -1083,8 +1083,8 @@ Address: %4
     <name>PaymentServer</name>
     <message>
         <location filename="../paymentserver.cpp" line="+107"/>
-        <source>Cannot start monocle: click-to-pay handler</source>
-        <translation>Cannot start monocle: click-to-pay handler</translation>
+        <source>Cannot start cendol: click-to-pay handler</source>
+        <translation>Cannot start cendol: click-to-pay handler</translation>
     </message>
 </context>
 <context>
@@ -1233,8 +1233,8 @@ Address: %4
     </message>
     <message>
         <location line="+7"/>
-        <source>Show the Monocle help message to get a list with possible Monocle command-line options.</source>
-        <translation>Show the Monocle help message to get a list with possible Monocle command-line options.</translation>
+        <source>Show the Cendol help message to get a list with possible Cendol command-line options.</source>
+        <translation>Show the Cendol help message to get a list with possible Cendol command-line options.</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -1253,13 +1253,13 @@ Address: %4
     </message>
     <message>
         <location line="-104"/>
-        <source>Monocle - Debug window</source>
-        <translation>Monocle - Debug window</translation>
+        <source>Cendol - Debug window</source>
+        <translation>Cendol - Debug window</translation>
     </message>
     <message>
         <location line="+25"/>
-        <source>Monocle Core</source>
-        <translation>Monocle Core</translation>
+        <source>Cendol Core</source>
+        <translation>Cendol Core</translation>
     </message>
     <message>
         <location line="+279"/>
@@ -1268,8 +1268,8 @@ Address: %4
     </message>
     <message>
         <location line="+7"/>
-        <source>Open the Monocle debug log file from the current data directory. This can take a few seconds for large log files.</source>
-        <translation>Open the Monocle debug log file from the current data directory. This can take a few seconds for large log files.</translation>
+        <source>Open the Cendol debug log file from the current data directory. This can take a few seconds for large log files.</source>
+        <translation>Open the Cendol debug log file from the current data directory. This can take a few seconds for large log files.</translation>
     </message>
     <message>
         <location line="+102"/>
@@ -1278,8 +1278,8 @@ Address: %4
     </message>
     <message>
         <location filename="../rpcconsole.cpp" line="-30"/>
-        <source>Welcome to the Monocle RPC console.</source>
-        <translation>Welcome to the Monocle RPC console.</translation>
+        <source>Welcome to the Cendol RPC console.</source>
+        <translation>Welcome to the Cendol RPC console.</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -1462,8 +1462,8 @@ Address: %4
     </message>
     <message>
         <location filename="../sendcoinsentry.cpp" line="+1"/>
-        <source>Enter a Monocle address (e.g. MUVz3KZqgJdC3djwVCLD6ZMpDj5X1FqeKs)</source>
-        <translation>Enter a Monocle address (e.g. MUVz3KZqgJdC3djwVCLD6ZMpDj5X1FqeKs)</translation>
+        <source>Enter a Cendol address (e.g. MUVz3KZqgJdC3djwVCLD6ZMpDj5X1FqeKs)</source>
+        <translation>Enter a Cendol address (e.g. MUVz3KZqgJdC3djwVCLD6ZMpDj5X1FqeKs)</translation>
     </message>
 </context>
 <context>
@@ -1527,8 +1527,8 @@ Address: %4
     </message>
     <message>
         <location line="+21"/>
-        <source>Sign the message to prove you own this Monocle address</source>
-        <translation>Sign the message to prove you own this Monocle address</translation>
+        <source>Sign the message to prove you own this Cendol address</source>
+        <translation>Sign the message to prove you own this Cendol address</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -1563,8 +1563,8 @@ Address: %4
     </message>
     <message>
         <location line="+40"/>
-        <source>Verify the message to ensure it was signed with the specified Monocle address</source>
-        <translation>Verify the message to ensure it was signed with the specified Monocle address</translation>
+        <source>Verify the message to ensure it was signed with the specified Cendol address</source>
+        <translation>Verify the message to ensure it was signed with the specified Cendol address</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -1579,8 +1579,8 @@ Address: %4
     <message>
         <location filename="../signverifymessagedialog.cpp" line="+27"/>
         <location line="+3"/>
-        <source>Enter a Monocle address (e.g. MUVz3KZqgJdC3djwVCLD6ZMpDj5X1FqeKs)</source>
-        <translation>Enter a Monocle address (e.g. MUVz3KZqgJdC3djwVCLD6ZMpDj5X1FqeKs)</translation>
+        <source>Enter a Cendol address (e.g. MUVz3KZqgJdC3djwVCLD6ZMpDj5X1FqeKs)</source>
+        <translation>Enter a Cendol address (e.g. MUVz3KZqgJdC3djwVCLD6ZMpDj5X1FqeKs)</translation>
     </message>
     <message>
         <location line="-2"/>
@@ -1589,8 +1589,8 @@ Address: %4
     </message>
     <message>
         <location line="+3"/>
-        <source>Enter Monocle signature</source>
-        <translation>Enter Monocle signature</translation>
+        <source>Enter Cendol signature</source>
+        <translation>Enter Cendol signature</translation>
     </message>
     <message>
         <location line="+82"/>
@@ -1663,8 +1663,8 @@ Address: %4
     <name>SplashScreen</name>
     <message>
         <location filename="../splashscreen.cpp" line="+22"/>
-        <source>The Monocle developers</source>
-        <translation>The Monocle developers</translation>
+        <source>The Cendol developers</source>
+        <translation>The Cendol developers</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -2216,8 +2216,8 @@ Address: %4
     <name>bitcoin-core</name>
     <message>
         <location filename="../bitcoinstrings.cpp" line="+94"/>
-        <source>Monocle version</source>
-        <translation>Monocle version</translation>
+        <source>Cendol version</source>
+        <translation>Cendol version</translation>
     </message>
     <message>
         <location line="+102"/>
@@ -2226,8 +2226,8 @@ Address: %4
     </message>
     <message>
         <location line="-29"/>
-        <source>Send command to -server or monocled</source>
-        <translation>Send command to -server or monocled</translation>
+        <source>Send command to -server or cendold</source>
+        <translation>Send command to -server or cendold</translation>
     </message>
     <message>
         <location line="-23"/>
@@ -2246,13 +2246,13 @@ Address: %4
     </message>
     <message>
         <location line="+24"/>
-        <source>Specify configuration file (default: monocle.conf)</source>
-        <translation>Specify configuration file (default: monocle.conf)</translation>
+        <source>Specify configuration file (default: cendol.conf)</source>
+        <translation>Specify configuration file (default: cendol.conf)</translation>
     </message>
     <message>
         <location line="+3"/>
-        <source>Specify pid file (default: monocled.pid)</source>
-        <translation>Specify pid file (default: monocled.pid)</translation>
+        <source>Specify pid file (default: cendold.pid)</source>
+        <translation>Specify pid file (default: cendold.pid)</translation>
     </message>
     <message>
         <location line="-1"/>
@@ -2329,24 +2329,24 @@ Address: %4
         <source>%s, you must set a rpcpassword in the configuration file:
 %s
 It is recommended you use the following random password:
-rpcuser=monoclerpc
+rpcuser=cendolrpc
 rpcpassword=%s
 (you do not need to remember this password)
 The username and password MUST NOT be the same.
 If the file does not exist, create it with owner-readable-only file permissions.
 It is also recommended to set alertnotify so you are notified of problems;
-for example: alertnotify=echo %%s | mail -s &quot;Monocle Alert&quot; admin@foo.com
+for example: alertnotify=echo %%s | mail -s &quot;Cendol Alert&quot; admin@foo.com
 </source>
         <translation>%s, you must set a rpcpassword in the configuration file:
 %s
 It is recommended you use the following random password:
-rpcuser=monoclerpc
+rpcuser=cendolrpc
 rpcpassword=%s
 (you do not need to remember this password)
 The username and password MUST NOT be the same.
 If the file does not exist, create it with owner-readable-only file permissions.
 It is also recommended to set alertnotify so you are notified of problems;
-for example: alertnotify=echo %%s | mail -s &quot;Monocle Alert&quot; admin@foo.com
+for example: alertnotify=echo %%s | mail -s &quot;Cendol Alert&quot; admin@foo.com
 </translation>
     </message>
     <message>
@@ -2361,8 +2361,8 @@ for example: alertnotify=echo %%s | mail -s &quot;Monocle Alert&quot; admin@foo.
     </message>
     <message>
         <location line="+3"/>
-        <source>Cannot obtain a lock on data directory %s. Monocle is probably already running.</source>
-        <translation>Cannot obtain a lock on data directory %s. Monocle is probably already running.</translation>
+        <source>Cannot obtain a lock on data directory %s. Cendol is probably already running.</source>
+        <translation>Cannot obtain a lock on data directory %s. Cendol is probably already running.</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -2406,8 +2406,8 @@ for example: alertnotify=echo %%s | mail -s &quot;Monocle Alert&quot; admin@foo.
     </message>
     <message>
         <location line="+3"/>
-        <source>Warning: Please check that your computer&apos;s date and time are correct! If your clock is wrong Monocle will not work properly.</source>
-        <translation>Warning: Please check that your computer&apos;s date and time are correct! If your clock is wrong Monocle will not work properly.</translation>
+        <source>Warning: Please check that your computer&apos;s date and time are correct! If your clock is wrong Cendol will not work properly.</source>
+        <translation>Warning: Please check that your computer&apos;s date and time are correct! If your clock is wrong Cendol will not work properly.</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -2656,8 +2656,8 @@ for example: alertnotify=echo %%s | mail -s &quot;Monocle Alert&quot; admin@foo.
     </message>
     <message>
         <location line="+5"/>
-        <source>SSL options: (see the Monocle Wiki for SSL setup instructions)</source>
-        <translation>SSL options: (see the Monocle Wiki for SSL setup instructions)</translation>
+        <source>SSL options: (see the Cendol Wiki for SSL setup instructions)</source>
+        <translation>SSL options: (see the Cendol Wiki for SSL setup instructions)</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -2846,13 +2846,13 @@ for example: alertnotify=echo %%s | mail -s &quot;Monocle Alert&quot; admin@foo.
     </message>
     <message>
         <location line="+1"/>
-        <source>Error loading wallet.dat: Wallet requires newer version of Monocle</source>
-        <translation>Error loading wallet.dat: Wallet requires newer version of Monocle</translation>
+        <source>Error loading wallet.dat: Wallet requires newer version of Cendol</source>
+        <translation>Error loading wallet.dat: Wallet requires newer version of Cendol</translation>
     </message>
     <message>
         <location line="+93"/>
-        <source>Wallet needed to be rewritten: restart Monocle to complete</source>
-        <translation>Wallet needed to be rewritten: restart Monocle to complete</translation>
+        <source>Wallet needed to be rewritten: restart Cendol to complete</source>
+        <translation>Wallet needed to be rewritten: restart Cendol to complete</translation>
     </message>
     <message>
         <location line="-95"/>
@@ -2911,8 +2911,8 @@ for example: alertnotify=echo %%s | mail -s &quot;Monocle Alert&quot; admin@foo.
     </message>
     <message>
         <location line="-25"/>
-        <source>Unable to bind to %s on this computer. Monocle is probably already running.</source>
-        <translation>Unable to bind to %s on this computer. Monocle is probably already running.</translation>
+        <source>Unable to bind to %s on this computer. Cendol is probably already running.</source>
+        <translation>Unable to bind to %s on this computer. Cendol is probably already running.</translation>
     </message>
     <message>
         <location line="+64"/>

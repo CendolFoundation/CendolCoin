@@ -23,7 +23,7 @@ using namespace boost;
 using namespace numeric;
 
 #if defined(NDEBUG)
-# error "Monocle cannot be compiled without assertions."
+# error "Cendol cannot be compiled without assertions."
 #endif
 
 //
@@ -39,14 +39,15 @@ CTxMemPool mempool;
 unsigned int nTransactionsUpdated = 0;
 
 map<uint256, CBlockIndex*> mapBlockIndex;
-uint256 hashGenesisBlock("0xf11046292ff76af48b66de6f1a210c09825d2ab4f56975ec507766ebf9c9f443");
-static CBigNum bnProofOfWorkLimit(~uint256(0) >> 20); // Monocle: starting difficulty is 1 / 2^12
+uint256 hashGenesisBlock("0x78e2ed1b137b09d0964c95a06ab331f43f378c17eb2974ed572ac9f55dddcdb6");
+//uint256 hashGenesisBlock("0x0");
+static CBigNum bnProofOfWorkLimit(~uint256(0) >> 20); // Cendol: starting difficulty is 1 / 2^12
 CBlockIndex* pindexGenesisBlock = NULL;
 int nBestHeight = -1;
 uint256 nBestChainWork = 0;
 uint256 nBestInvalidWork = 0;
 uint256 hashBestChain = 0;
-uint32_t nVertcoinChainStartTime = 1389306217;
+uint32_t nVertcoinChainStartTime = 1399943167;
 CBlockIndex* pindexBest = NULL;
 set<CBlockIndex*, CBlockIndexWorkComparator> setBlockIndexValid; // may contain all CBlockIndex*'s that have validness >=BLOCK_VALID_TRANSACTIONS, and must contain those who aren't failed
 int64 nTimeBestReceived = 0;
@@ -57,10 +58,10 @@ bool fBenchmark = false;
 bool fTxIndex = false;
 unsigned int nCoinCacheSize = 5000;
 
-/** Fees smaller than this (in montoshi) are considered zero fee (for transaction creation) */
-int64 CTransaction::nMinTxFee = 1000000; // 1m montoshis = 0.01 MON
-/** Fees smaller than this (in montoshi) are considered zero fee (for relaying) */
-int64 CTransaction::nMinRelayTxFee = 1000000; // 1m montoshis = 0.01 MON
+/** Fees smaller than this (in centoshi) are considered zero fee (for transaction creation) */
+int64 CTransaction::nMinTxFee = 20; // 0.002 Cendol 
+/** Fees smaller than this (in centoshi) are considered zero fee (for relaying) */
+int64 CTransaction::nMinRelayTxFee = 5; // 1m montoshis = 0.01 MON
 
 CMedianFilter<int> cPeerBlockCounts(8, 0); // Amount of blocks that other nodes claim to have
 
@@ -73,7 +74,7 @@ map<uint256, set<uint256> > mapOrphanTransactionsByPrev;
 // Constant stuff for coinbase transactions we create:
 CScript COINBASE_FLAGS;
 
-const string strMessageMagic = "Monocle Signed Message:\n";
+const string strMessageMagic = "Cendol Signed Message:\n";
 
 double dHashesPerSec = 0.0;
 int64 nHPSTimerStart = 0;
@@ -364,7 +365,7 @@ unsigned int LimitOrphanTxSize(unsigned int nMaxOrphans)
 
 bool CTxOut::IsDust() const
 {
-    // Monocle: IsDust() detection disabled, allows any valid dust to be relayed.
+    // Cendol: IsDust() detection disabled, allows any valid dust to be relayed.
     // The fees imposed on each dust txo is considered sufficient spam deterrant. 
     return false;
 }
@@ -606,6 +607,10 @@ bool CTransaction::CheckTransaction(CValidationState &state) const
 int64 CTransaction::GetMinFee(unsigned int nBlockSize, bool fAllowFree,
                               enum GetMinFee_mode mode) const
 {
+
+  //Cendol fix fee
+  return 20;
+  /*
     // Base fee is either nMinTxFee or nMinRelayTxFee
     int64 nBaseFee = (mode == GMF_RELAY) ? nMinRelayTxFee : nMinTxFee;
 
@@ -613,7 +618,7 @@ int64 CTransaction::GetMinFee(unsigned int nBlockSize, bool fAllowFree,
     unsigned int nNewBlockSize = nBlockSize + nBytes;
     int64 nMinFee = (1 + (int64)nBytes / 1000) * nBaseFee;
 
-    // Monocle has no free transactions
+    // Cendol has no free transactions
     if (fAllowFree)
     {
         // There is a free transaction area in blocks created by most miners,
@@ -626,7 +631,7 @@ int64 CTransaction::GetMinFee(unsigned int nBlockSize, bool fAllowFree,
 //            nMinFee = 0;
     }
 
-    // Monocle
+    // Cendol
     // To limit dust spam, add nBaseFee for each output less than DUST_SOFT_LIMIT
     BOOST_FOREACH(const CTxOut& txout, vout)
         if (txout.nValue < DUST_SOFT_LIMIT)
@@ -643,6 +648,7 @@ int64 CTransaction::GetMinFee(unsigned int nBlockSize, bool fAllowFree,
     if (!MoneyRange(nMinFee))
         nMinFee = MAX_MONEY;
     return nMinFee;
+  */
 }
 
 void CTxMemPool::pruneSpent(const uint256 &hashTx, CCoins &coins)
@@ -1126,18 +1132,24 @@ unsigned char GetNfactor(int64 nTimestamp) {
     return min(max(N, minNfactor), maxNfactor);
 }
 
+//Cendol SUBSIDY
 int64 static GetBlockValue(int nHeight, int64 nFees)
 {
-    int64 nSubsidy = 0;
+  int64 nSubsidy = 10000; //Cendol has fixed subsidy
     
-    if (nHeight < 999) // reward ramp-up during initial phase (6199 total MON)
-        nSubsidy = (1 * COIN) << (nHeight + 1)/200;
-    else if (nHeight < 1468416) // after block 1,468,415 only fees will be rewarded
-        nSubsidy = 25 * pow(double(0.97044562), (nHeight + 1)/10080) * COIN; // (8,393,800.92291282 total MON from block 999 to block 1,468,415)
-    
-	return nSubsidy + nFees;
+  if (nHeight == 1){
+    nSubsidy = 5000000000000 * COIN; //5 triliun monetary stabilization
+    return nSubsidy + nFees;    
+  }
+  if (nHeight == 2){  
+    nSubsidy = 1000000000000 * COIN; //1 triliun airdrop
+    return nSubsidy + nFees;
+  }
+  nSubsidy = 10000 * COIN;
+  return nSubsidy + nFees;
 }
 
+//Cendol generation
 static const int64 nTargetTimespan = 24 * 60; // 24 minutes between retargets
 static const int64 nTargetSpacing = 2 * 60; // 2 minute blocks
 static const int64 nInterval = nTargetTimespan / nTargetSpacing; // retargets every 12 blocks
@@ -1252,7 +1264,7 @@ unsigned int static BorisRidiculouslyNamedDifficultyFunction(const CBlockIndex* 
     printf("After: %08x %.8f\n", bnNew.GetCompact(), GetDifficultyHelper(bnNew.GetCompact()));
     printf("Ratio After/Before: %.8f\n", GetDifficultyHelper(bnNew.GetCompact()) / GetDifficultyHelper(BlockLastSolved->nBits));
 
-    return bnNew.GetCompact();
+   return bnNew.GetCompact();
 }
 
 
@@ -1292,11 +1304,14 @@ bool CheckProofOfWork(uint256 hash, unsigned int nBits)
 
     // Check range
     if (bnTarget <= 0 || bnTarget > bnProofOfWorkLimit)
-        return error("CheckProofOfWork() : nBits below minimum work");
+        return error("CheckProofOfWork() : nBits below minimum work : %x",nBits);
 
-    // Check proof of work matches claimed amount
-    if (hash > bnTarget.getuint256())
+    // Check proof of work matches claimed amounto
+    if (hash > bnTarget.getuint256()){
+        printf("nbits: %s\n", bnTarget.getuint256().ToString().c_str());
+        printf("hash: %s\n", hash.ToString().c_str());
         return error("CheckProofOfWork() : hash doesn't match nBits");
+    }
 
     return true;
 }
@@ -2253,7 +2268,7 @@ bool CBlock::CheckBlock(CValidationState &state, int nHeight, bool fCheckPOW, bo
     if (vtx.empty() || vtx.size() > MAX_BLOCK_SIZE || ::GetSerializeSize(*this, SER_NETWORK, PROTOCOL_VERSION) > MAX_BLOCK_SIZE)
         return state.DoS(100, error("CheckBlock() : size limits failed"));
 
-    // Monocle: Special short-term limits to avoid 10,000 BDB lock limit:
+    // Cendol: Special short-term limits to avoid 10,000 BDB lock limit:
     if (GetBlockTime() < 1376568000)  // stop enforcing 15 August 2013 00:00:00
     {
         // Rule is: #unique txids referenced <= 4,500
@@ -2900,7 +2915,8 @@ bool LoadBlockIndex()
         pchMessageStart[1] = 0xfc;
         pchMessageStart[2] = 0xbe;
         pchMessageStart[3] = 0xea;
-        hashGenesisBlock = uint256("0xe900c15110857ca650625825761b00381699ef41451915468b1488644295671a");
+        hashGenesisBlock = uint256("0xaad8d53a128a8b9828ce5f3ec2425b316d93266839e232b3ea916e54fde8ed7a");
+        //hashGenesisBlock = uint256("0");
     }
 
     //
@@ -2912,7 +2928,7 @@ bool LoadBlockIndex()
     return true;
 }
 
-
+//EKO GNESIS BLOCK
 bool InitBlockIndex() {
     // Check whether we're already initialized
     if (pindexGenesisBlock != NULL)
@@ -2927,7 +2943,7 @@ bool InitBlockIndex() {
     if (!fReindex) {
 
         // Genesis block
-        const char* pszTimestamp = "Times 2014/4/30 Saga staff set for windfall with float";
+        const char* pszTimestamp = "Bisnis Indonesia 2014/05/13 OJK Serius Garap Pengembangan Layanan Keuangan Digital";
         CTransaction txNew;
         vector<unsigned char> extraNonce(4);
         unsigned int startBits;
@@ -2937,13 +2953,14 @@ bool InitBlockIndex() {
             extraNonce[1] = 0x00;
             extraNonce[2] = 0x00;
             extraNonce[3] = 0x00;
-            startBits = 0x1e0ffff0;
+            startBits = 0x1e0fffff;
         } else {
             extraNonce[0] = 0x82;
             extraNonce[1] = 0x3f;
             extraNonce[2] = 0x00;
             extraNonce[3] = 0x00;
-            startBits = 0x1c7fff80;
+            startBits = 0x1e0fffff;
+            //startBits = 0x1ec0ff80;
         }
 
         txNew.vin.resize(1);
@@ -2957,14 +2974,14 @@ bool InitBlockIndex() {
         block.hashPrevBlock = 0;
         block.hashMerkleRoot = block.BuildMerkleTree();
         block.nVersion = 2;
-        block.nTime    = 1398858996;
+        block.nTime    = 1399943167;
         block.nBits    = startBits;
-        block.nNonce   = 3832283904;
+        block.nNonce   = 3280686;
 
         if (fTestNet)
         {
-            block.nTime    = 1398863062;
-            block.nNonce   = 1016070144;
+            block.nTime    = 1399943167;
+            block.nNonce   = 9747946;
             block.nBits    = startBits;
         }
 
@@ -2974,11 +2991,12 @@ bool InitBlockIndex() {
         printf("%s\n", hash.ToString().c_str());
         printf("%s\n", hashGenesisBlock.ToString().c_str());
         printf("%s\n", block.hashMerkleRoot.ToString().c_str());
+
         uint256 genMerkleRoot;
         if(fTestNet)
-            genMerkleRoot.SetHex("0xd147c49fc0fa5fbdf7f76e0e028d3f8159805695c8dddf8f8fdaa225ad815f96");
+	    genMerkleRoot.SetHex("0xbe8f55e2dde33cb0e020bf681c87e8e3905a99602314a27d5a37ef16b248b947");
         else
-            genMerkleRoot.SetHex("0xe3846300616758149ef8b47b337e025912cad91e6024bed2a3199ed70c7c7374");
+            genMerkleRoot.SetHex("0xb050bb31369f1fbe8b3c94947da3a8fe571dcd09d7c265547459a3adc50d549b");
         
         assert(block.hashMerkleRoot == genMerkleRoot);
         block.print();
@@ -3253,8 +3271,9 @@ bool static AlreadyHave(const CInv& inv)
 // The message start string is designed to be unlikely to occur in normal data.
 // The characters are rarely used upper ASCII, not valid as UTF-8, and produce
 // a large 4-byte int at any alignment.
-unsigned char pchMessageStart[4] = { 0xe1, 0xd7, 0xfc, 0xef }; // Monocle: increase each by adding 2 to bitcoin's value.
-
+unsigned char pchMessageStart[4] = { 0xe1, 0xd7, 0xfd, 0xef }; 
+    // Monocle: increase each by adding 2 to bitcoin's value. 
+    // Cendol: add 1 to the third byte
 
 void static ProcessGetData(CNode* pfrom)
 {
@@ -3942,14 +3961,9 @@ bool static ProcessMessage(CNode* pfrom, string strCommand, CDataStream& vRecv)
         pfrom->fRelayTxes = true;
     }
 
-
-    else if (strCommand == "filteradd")
-    {
-        vector<unsigned char> vData;
-        vRecv >> vData;
-
         // Nodes must NEVER send a data item > 520 bytes (the max size for a script data object,
         // and thus, the maximum size any matched object can have) in a filteradd message
+    /* Cendol--- comment out
         if (vData.size() > MAX_SCRIPT_ELEMENT_SIZE)
         {
             pfrom->Misbehaving(100);
@@ -3961,6 +3975,7 @@ bool static ProcessMessage(CNode* pfrom, string strCommand, CDataStream& vRecv)
                 pfrom->Misbehaving(100);
         }
     }
+    */
 
 
     else if (strCommand == "filterclear")
@@ -4714,7 +4729,7 @@ bool CheckWork(CBlock* pblock, CWallet& wallet, CReserveKey& reservekey)
             return error("AUX POW parent hash %s is not under target %s", auxpow->GetParentBlockHash().GetHex().c_str(), hashTarget.GetHex().c_str());
 
         //// debug print
-        printf("MonocleMiner:\n");
+        printf("CendolMiner:\n");
         printf("AUX proof-of-work found  \n     our hash: %s   \n  parent hash: %s  \n       target: %s\n",
                 hash.GetHex().c_str(),
                 auxpow->GetParentBlockHash().GetHex().c_str(),
@@ -4727,7 +4742,7 @@ bool CheckWork(CBlock* pblock, CWallet& wallet, CReserveKey& reservekey)
             return false;
 
         //// debug print
-        printf("MonocleMiner:\n");
+        printf("CendolMiner:\n");
         printf("proof-of-work found  \n  hash: %s  \ntarget: %s\n", hash.GetHex().c_str(), hashTarget.GetHex().c_str());
     }
     
@@ -4739,7 +4754,7 @@ bool CheckWork(CBlock* pblock, CWallet& wallet, CReserveKey& reservekey)
     {
         LOCK(cs_main);
         if (pblock->hashPrevBlock != hashBestChain)
-            return error("MonocleMiner : generated block is stale");
+            return error("CendolMiner : generated block is stale");
 
         // Remove key from key pool
         reservekey.KeepKey();
@@ -4753,7 +4768,7 @@ bool CheckWork(CBlock* pblock, CWallet& wallet, CReserveKey& reservekey)
         // Process this block the same as if we had received it from another node
         CValidationState state;
         if (!ProcessBlock(state, NULL, pblock))
-            return error("MonocleMiner : ProcessBlock, block not accepted");
+            return error("CendolMiner : ProcessBlock, block not accepted");
     }
 
     return true;
@@ -4805,7 +4820,7 @@ void static ScryptMiner(CWallet *pwallet)
 {
     printf("ScryptMiner started\n");
     SetThreadPriority(THREAD_PRIORITY_LOWEST);
-    RenameThread("monocle-miner");
+    RenameThread("cendol-miner");
 
     // Each thread has its own key and counter
     CReserveKey reservekey(pwallet);
