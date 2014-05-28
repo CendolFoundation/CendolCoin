@@ -1,6 +1,6 @@
 src/*.exe
-src/monocle
-src/monocled
+src/cendol
+src/cendold
 src/test_monocle
 .*.swp
 *.*~*
@@ -9,17 +9,17 @@ src/test_monocle
 *.orig
 *.o
 *.patch
-.monocle
-
+.cendol
+\#*
 # Compilation and Qt preprocessor part
 *.qm
 Makefile
-monocle-qt
+cendol-qt
 Monocle.app
 
 # Unit-tests
 Makefile.test
-monocle-qt_test
+cendol-qt_test
 
 # Resources cpp
 qrc_*.cpp
