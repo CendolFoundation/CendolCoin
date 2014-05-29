@@ -1,4 +1,4 @@
-Monocle integration/staging tree
+Cendolcoin integration/staging tree
 ================================
 
 http://www.cendol.co.in

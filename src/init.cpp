@@ -581,7 +581,7 @@ bool AppInit2(boost::thread_group& threadGroup)
         nMaxConnections = nFD - MIN_CORE_FILEDESCRIPTORS;
 
     // ********************************************************* Step 3: parameter-to-internal-flags
-
+    fDebug = false; //Cendol
     fDebug = GetBoolArg("-debug");
     fBenchmark = GetBoolArg("-benchmark");
 
